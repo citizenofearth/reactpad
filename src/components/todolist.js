@@ -7,13 +7,13 @@ import Todo from './todo'
 export default function TodoList() {
   const [todos, setTodos] = useContext(TodoContext);
 
-  // toggleDone
+  // toggle Done button
   const toggleDone = (todo) => {
     todos.map(_todo => _todo === todo ? _todo.done = !todo.done : todo)
     setTodos([...todos])
   }
 
-  // delete
+  // delete Todo
   const deleteTodo = (todo) => {
     const _todos = todos.filter(_todo => _todo !== todo)
     setTodos(_todos)

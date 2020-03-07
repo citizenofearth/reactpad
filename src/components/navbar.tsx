@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false)
   const [value, setValue] = useState("")
 
-  const addTodo = (e) => {
+  const addTodo = (e: any) => {
     e.preventDefault()
     setTodos([...todos, {
       "id": Date.now(),

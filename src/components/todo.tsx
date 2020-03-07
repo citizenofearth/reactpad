@@ -1,6 +1,15 @@
 import React from 'react'
 
-export default function Todo(props) {
+export interface ToDo {
+  todo: {
+    done: boolean,
+    value: string
+  };
+  toggleDone: any;
+  deleteTodo: any;
+}
+
+export default function Todo(this: void, props: ToDo) {
   return (
     <div className="card">
       <div className="card-content">

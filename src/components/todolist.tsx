@@ -2,20 +2,22 @@ import React, {useContext} from 'react'
 
 import { TodoContext } from '../TodoContext';
 
+import { ToDo } from './todo'
+
 import Todo from './todo'
 
 export default function TodoList() {
   const [todos, setTodos] = useContext(TodoContext);
 
   // toggle Done button
-  const toggleDone = (todo) => {
-    todos.map(_todo => _todo === todo ? _todo.done = !todo.done : todo)
+  const toggleDone = (todo: ToDo) => {
+    todos.map(_todo: string => _todo === todo ? _todo.done = !todo.done : todo)
     setTodos([...todos])
   }
 
   // delete Todo
-  const deleteTodo = (todo) => {
-    const _todos = todos.filter(_todo => _todo !== todo)
+  const deleteTodo = (todo: ToDo) => {
+    const _todos: string = todos.filter(_todo => _todo !== todo)
     setTodos(_todos)
   }
 

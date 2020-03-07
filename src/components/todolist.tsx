@@ -11,7 +11,7 @@ export default function TodoList() {
 
   // toggle Done button
   const toggleDone = (todo: ToDo) => {
-    todos.map(_todo: string => _todo === todo ? _todo.done = !todo.done : todo)
+    todos.map(_todo: => _todo === todo ? _todo.done = !todo.done : todo)
     setTodos([...todos])
   }
 
